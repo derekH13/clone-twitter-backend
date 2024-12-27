@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "projeto-ebac-final"
+version = "0.1.0"
+description = ""
+authors = ["derekH13 <168042164+derekH13@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.1.4"
+django-rest-framework = "^0.1.0"
+django-extensions = "^3.2.3"
+django-cors-headers = "^4.6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
