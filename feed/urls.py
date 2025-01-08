@@ -12,4 +12,5 @@ router.register(r'post', viewsets.PostViewSets, basename='post')
 urlpatterns = [
     path('', include(router.urls)),
     path('postUser/<int:pkuser>/', viewsets.user_all_post, name='post-user'),
+
 ]
