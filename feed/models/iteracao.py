@@ -1,6 +1,7 @@
 from django.db import models
 from feed.models import Post
 from cadastro.models import Profile
+from django.contrib.auth.models import User
 
 
 class Iteracao(models.Model):
@@ -9,7 +10,7 @@ class Iteracao(models.Model):
         Profile,
         # Define que, ao excluir o Profile, todos as iteraçoes associados a ele também serão excluídos.
         on_delete=models.CASCADE,
-        # Permite que você acesse todos as Iteraçoes de um usuário usando profile.iteracao.all().
+        # Permite que você acesse todos as Iteraçoes de um usuário usando Profile.iteracao.all().
         related_name='iteracao'
     )
 
@@ -24,7 +25,7 @@ class Iteracao(models.Model):
     iteracao_criada = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.user.username} comentou: {self.comentario[:30]}..."
+        return f"{self.profile_id} comentou: {self.comentario[:30]}..."
 
 
 class Curtida(models.Model):

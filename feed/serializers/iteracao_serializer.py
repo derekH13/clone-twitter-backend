@@ -4,7 +4,7 @@ from ..models import Curtida, Iteracao
 
 class IteracaoSerializer(serializers.ModelSerializer):
     class Meta:
-        model: Iteracao
+        model = Iteracao
         fields = [
             'iteracao_id', 'profile_id', 'post_id', 'iteracao_comentario', 'iteracao_criada'
         ]
@@ -12,7 +12,7 @@ class IteracaoSerializer(serializers.ModelSerializer):
 
 class CurtidaSerializer(serializers.ModelSerializer):
     class Meta:
-        model: Curtida
+        model = Curtida
         fields = [
-            'cutida_id', 'profile_id', 'post_id', 'curtida_criada'
+            'cutida_id', 'post_id', 'profile_id',  'curtida_criada'
         ]
